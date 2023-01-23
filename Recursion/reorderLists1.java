@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class reorderLists1 {
     public static void reorderList(ListNode head) {
@@ -7,7 +6,7 @@ public class reorderLists1 {
         ListNode stackBottom = head,stackTop = head.next.next;
         ListNode currB = stackBottom;
         while(currB.next!=null && stackTop.next!=null) {
-
+            
         }
         
     }
