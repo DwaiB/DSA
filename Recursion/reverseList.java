@@ -11,6 +11,15 @@ public class reverseList {
         display("head", head);
         display("rev", prev);
     }
+    public ListNode reverse(ListNode head,ListNode prev,int index){
+        if(index == 0){
+            return prev;
+        }
+        ListNode temp = head;
+        ListNode next = head.next;
+        temp.next = prev;
+        return reverse(next, head, index-1);
+    }
     public static void main(String[] args) {
         ListNode head = new ListNode();
         ListNode curr = head;
