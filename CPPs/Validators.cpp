@@ -13,7 +13,7 @@ class Solution{
             cout << max << endl;
             // logger.log("max: "+max);
             size_t maaxx = pow(2,31) ;
-            cout << maaxx+1 << endl;
+            cout << maaxx << endl;
             // logger.log("max: "+maaxx);
         }
 };
