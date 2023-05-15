@@ -1,4 +1,4 @@
-package BinaryTree;
+package JavaTuts.BinaryTree;
 
 public class LevelTravRecursive {
     Node root;
