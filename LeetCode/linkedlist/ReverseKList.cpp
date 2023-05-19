@@ -9,15 +9,26 @@ using namespace std;
       ListNode(int x) : val(x), next(nullptr) {}
       ListNode(int x, ListNode *next) : val(x), next(next) {}
  };
+ struct {
+    void print(ListNode* head){
+        ListNode* temp = head;
+        while(temp!=nullptr){
+        cout << temp->val << " -- " ;
+        temp = temp-> next;
+    }
+     cout << endl;
+    }
+ } logger;
 
 class Solution {
 public:
     ListNode* reverseKGroup(ListNode* head, int k) {
-        priority_queue<pair<int,ListNode*>> maxh;
+        if(head == nullptr || head-> next == nullptr) return head;
+        priority_queue<pair<double,ListNode*>> maxh;
         ListNode* ptr = head;
         ListNode* res= nullptr;
         ListNode* temp;
-        int it = 1,n=k;
+        double it = 1,n=k;
         while(ptr!=nullptr){
             maxh.push({n*it,ptr});
             n--;
@@ -27,14 +38,8 @@ public:
             }
             ptr = ptr->next;
         }
-        while(maxh.size()>0){
-            temp = maxh.top().second;
-            cout << maxh.top().first << ": " << temp->val << endl;
-            maxh.pop();
-        }
-        return head;
         
-        if(n!=0 && n!=k){
+        if(n!=0 && n<=k){
             temp = maxh.top().second;
             temp->next = res;
             res= temp;
@@ -44,6 +49,7 @@ public:
             while(n<k){
                 temp->next = maxh.top().second;
                 temp = temp->next;
+                maxh.pop();
                 n++;
             }
         }
@@ -70,9 +76,6 @@ int main(){
     }
     temp-> next = nullptr;
     temp = sol.reverseKGroup(head,3);
-    while(temp!=nullptr){
-        cout << temp->val << endl;
-        temp = temp-> next;
-    }
+    logger.print(temp);
     return 0;
 }
