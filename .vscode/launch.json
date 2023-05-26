@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "LRUCache",
+            "request": "launch",
+            "mainClass": "LRUCache",
+            "projectName": "DSA_5d27a036"
+        },
+        {
             "name": "(gdb) Attach",
             "type": "cppdbg",
             "request": "attach",
@@ -47,6 +54,5 @@
                 }
             ]
         }
-
     ]
 }
