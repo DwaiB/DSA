@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CategorizeData",
+            "request": "launch",
+            "mainClass": "Java.DSA.Queue.CategorizeData",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "PriorityQueue",
+            "request": "launch",
+            "mainClass": "Java.DSA.Queue.PriorityQueue",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "QueueList",
+            "request": "launch",
+            "mainClass": "Java.DSA.Queue.QueueList",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
             "name": "LRUCache",
             "request": "launch",
             "mainClass": "LRUCache",

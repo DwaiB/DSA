@@ -1,0 +1,25 @@
+
+Rather than sort the arrays, sort the indices. I.e., you have
+
+int arr[5]={4,1,3,6,2}
+string arr1[5]={"a1","b1","c1","d1","e1"};
+
+and you make
+
+int indices[5]={0,1,2,3,4};
+
+now you make a sort indices comparator that looks like this 
+(just and idea, you''ll probably have to fix it a little)
+
+class sort_indices
+{
+   private:
+     int* mparr;
+   public:
+     sort_indices(int* parr) : mparr(parr) {}
+     bool operator()(int i, int j) const { return mparr[i]<mparr[j]; }
+}
+
+now you can use the stl sort
+
+std::sort(indices, indices+5, sort_indices(arr));

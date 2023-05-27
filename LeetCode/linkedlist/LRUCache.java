@@ -1,45 +1,32 @@
 import java.util.HashMap;
 import java.util.Map;
 
+
 class LRUCache {
     class DNode{
         int key,value;
-        int size;
         DNode next;
         DNode prev;
-        DNode(int capacity){
-            size = capacity;
-            next = null;
-            prev = null;
-        }
-        DNode(int key,int value,int size){
+        DNode(){}
+        DNode(int key,int value){
             this.key = key;
             this.value = value;
-            this.size = size;
-            this.next = null;
-            this.prev = null;
-        }
-        DNode(int key,int value,int size,DNode prev,DNode next){
-            this.key = key;
-            this.value = value;
-            this.size = size;
-            this.next = next;
-            this.prev = prev;
+            this.next= null;
+            this.prev= null;
         }
     }
-    DNode head;
+    DNode head,tail;
     Map<Integer,DNode> cacheMap = new HashMap<Integer,DNode>();
-    int count;
+    int size;
     public LRUCache(int capacity) {
-        head = new DNode(capacity);
-        count = 0;
+        size = capacity;
+        head = new DNode();
     }
     
     public int get(int key) {
         if(cacheMap.containsKey(key)){
-            DNode node = cacheMap.get(key);
-            SwapNodeToStart(node);
-            return node.value;
+            SwapNodeToStart(key);
+            return cacheMap.get(key).value;
         }
         return -1;
     }
@@ -48,74 +35,57 @@ class LRUCache {
         if(cacheMap.containsKey(key)){
             DNode node = cacheMap.get(key);
             node.value = value;
-            SwapNodeToStart(node);
+            SwapNodeToStart(key);
         }
         else{
             InsertNode(key,value);
         }
     }
 
-    public void SwapNodeToStart(DNode iNode){
-        DNode prev = iNode.prev;
-        DNode next = iNode.next;
-        if(prev!=null){
-            prev.next = next;
+    public void SwapNodeToStart(int key){
+        DNode iNode = cacheMap.get(key);
+        if(iNode == head) return;
+        if(iNode.next!=null){
+            iNode.next.prev = iNode.prev;
         }
-        if(next!=null){
-            next.prev = prev;
+        if(iNode.prev!=null){
+            iNode.prev.next = iNode.next;
         }
         iNode.prev = null;
         iNode.next = head;
-        head.prev = iNode;
-        head = iNode;      
+        if(head!=null){
+            head.prev = iNode;
+        }
+        head = iNode;   
+        cacheMap.put(key, head);   
     }
     public void InsertNode(int key, int value){
-        if(count == head.size){
-            System.out.println("Count== Size : Deleting Last Node "+count);
+        if(cacheMap.size()== size){
             DeleteNodeFromEnd();
         }
-        if(head.key == 0 && count == 0){
-            System.out.println("Inserting new Node "+key);
-            head = new DNode(key, value, head.size);
+        DNode temp = new DNode(key, value);
+        temp.prev = null;
+        temp.next = head;
+        if(head != null){
+            head.prev = temp;
         }
-        else{
-            DNode node = new DNode(key, value, head.size, null, head);
-            head.prev = node;
-            head = node;
-        }
-        System.out.println("Inserted Node "+key);
-        if(head.prev!=null)
-            System.out.println("Previous Node "+head.prev.key);
-        if(head.next!=null){
-            System.out.println("Next Node "+head.next.key);
-        }
-        count++;
-        System.out.println("Count after Insertion "+count);
+        head = temp;
         cacheMap.put(key, head);
     }
     public void DeleteNodeFromEnd(){
-        if(head.size == 1){
-            System.out.println("Head is Last Node");
-            cacheMap.remove(head.key);
-            head = new DNode(0, 0, head.size);
-            count = 0;
-            return;
-        }
         DNode itr = head;
-        DNode prev=itr;
-        while(itr.next!=null){
-            prev= itr;
+        display(head);
+        while(itr.next!=null && itr.next.next!=null){
             itr = itr.next;
         }
-        if(prev!=null){
-            prev.next = itr.next;
-        }
         if(itr.next!=null){
-            itr.next.prev = itr.prev;
+            cacheMap.remove(itr.next.key);
+            itr.next = null;
         }
-        System.out.println("Count after Delete "+count);
-        count--;
-        cacheMap.remove(itr.key);
+        else if(itr.key == head.key){
+            cacheMap.remove(itr.key);
+            head = null;
+        }
     }
 
     public static void main(String[] args) {
@@ -135,11 +105,7 @@ class LRUCache {
     public void display(DNode head){
         DNode temp = head;
         while(temp!=null){
-            System.out.print("Node: "+temp.key+":"+temp.value);
-            if(temp.prev!=null){
-                System.out.println(" Previous Node "+temp.prev.key);
-            }
-            System.out.println();
+            System.out.println("Node: "+temp.key+":"+temp.value);
             temp = temp.next;
         }
     }
