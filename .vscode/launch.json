@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BinarySearchTree",
+            "request": "launch",
+            "mainClass": "Java.DSA.Tree.BST.BinarySearchTree",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "BinaryTree",
+            "request": "launch",
+            "mainClass": "Java.DSA.Tree.BinaryTree.BinaryTree",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
             "name": "CategorizeData",
             "request": "launch",
             "mainClass": "Java.DSA.Queue.CategorizeData",

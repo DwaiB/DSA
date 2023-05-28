@@ -1,10 +1,12 @@
-package Java.DSA.BinaryTree;
+package Java.DSA.Tree.BST;
+
 public class Node {
     int data;
     Node left, right;
 
     public Node(int data){
         this.data = data;
-        left = right = null;
+        left = null;
+        right = null;
     }
 }

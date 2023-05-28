@@ -20,7 +20,7 @@ public class reorderLists1 {
         display("StackBottom",stackBottom);
         display("Stacktop", stackTop);
         prev = head;
-        int a = (size/2)-1, b = (size/2);
+        int a = (size/2)-1;
         while(a>=0){
             prev.next = stackTop;
             System.out.println(a);

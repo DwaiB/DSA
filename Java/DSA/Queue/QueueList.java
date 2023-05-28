@@ -37,6 +37,7 @@ public class QueueList {
         }
         Node fNode = front.next;
         front.next = fNode.next;
+        fNode.next.prev = front;
         return fNode.val;
     }
 

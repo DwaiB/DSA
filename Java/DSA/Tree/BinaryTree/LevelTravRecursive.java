@@ -1,4 +1,4 @@
-package Java.DSA.BinaryTree;
+package Java.DSA.Tree.BinaryTree;
 
 public class LevelTravRecursive {
     Node root;

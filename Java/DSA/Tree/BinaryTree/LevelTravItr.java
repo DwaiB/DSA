@@ -1,4 +1,4 @@
-package Java.DSA.BinaryTree;
+package Java.DSA.Tree.BinaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
