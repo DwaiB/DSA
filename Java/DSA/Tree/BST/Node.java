@@ -1,10 +1,10 @@
 package Java.DSA.Tree.BST;
 
 public class Node {
-    int data;
+    Integer data;
     Node left, right;
 
-    public Node(int data){
+    public Node(Integer data){
         this.data = data;
         left = null;
         right = null;

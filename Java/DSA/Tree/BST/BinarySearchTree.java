@@ -4,7 +4,7 @@ public class BinarySearchTree {
     Node root;
     BinarySearchTree(){}
     
-    public Node find(int data,Node root){
+    public Node find(Integer data,Node root){
         if(root == null) return null;
         if(root.data == data) return root;
 
@@ -16,7 +16,7 @@ public class BinarySearchTree {
             ptr = root.right;
         while(ptr!=null){
             if(data == ptr.data)
-                return ptr;
+                return save;
             save = ptr;
             if(data < ptr.data)
                 ptr = ptr.left;
@@ -26,11 +26,13 @@ public class BinarySearchTree {
         }
         return save;
     }
-    public void insert(int[] arr){
+    public void insert(Integer[] arr){
         Node temp,item;
         for(int i=0;i<arr.length;i++){
             temp = find(arr[i],root);
-            if(temp != null && temp.data == arr[i]){
+            if(temp != null && 
+            ((temp.left!=null && temp.left.data == arr[i]) ||
+             (temp.right!=null && temp.right.data == arr[i]))){
                 continue;
             }
             item = new Node(arr[i]);
@@ -59,7 +61,7 @@ public class BinarySearchTree {
     }
     public static void main(String[] args) {
         BinarySearchTree BST = new BinarySearchTree();
-        int [] arr = {2,4,7,5,1,8,9,6,3};
+        Integer  [] arr = {2,4,7,5,1,8,9,6,3};
         BST.insert(arr);
         System.out.println("In Order: \n");
         BST.Inorder(BST.root);

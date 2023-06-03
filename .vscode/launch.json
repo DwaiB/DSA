@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BSTDelete",
+            "request": "launch",
+            "mainClass": "Java.DSA.Tree.BST.BSTDelete",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
             "name": "BinarySearchTree",
             "request": "launch",
             "mainClass": "Java.DSA.Tree.BST.BinarySearchTree",
