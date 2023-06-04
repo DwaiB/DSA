@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BinaryTree {
-    Node root;
-    BinaryTree(){}
+    public Node root;
+    public BinaryTree(){}
 
     public void createTree(Integer[] arr){
         int k = 1,n=arr.length;

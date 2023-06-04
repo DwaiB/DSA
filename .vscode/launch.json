@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "InvertTree",
+            "request": "launch",
+            "mainClass": "InvertTree",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
             "name": "BSTDelete",
             "request": "launch",
             "mainClass": "Java.DSA.Tree.BST.BSTDelete",
