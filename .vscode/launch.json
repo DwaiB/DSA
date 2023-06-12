@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SnapshotArray",
+            "request": "launch",
+            "mainClass": "LeetCode.array_and_hashing.SnapshotArray",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "Codec",
+            "request": "launch",
+            "mainClass": "Codec",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
             "name": "InvertTree",
             "request": "launch",
             "mainClass": "InvertTree",
