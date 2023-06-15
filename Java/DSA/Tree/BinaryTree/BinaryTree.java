@@ -4,23 +4,23 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BinaryTree {
-    public Node root;
+    public TreeNode root;
     public BinaryTree(){}
 
-    public void createTree(Integer[] arr){
+    public TreeNode createTree(Integer[] arr){
         int k = 1,n=arr.length;
         if(root == null){
-            root = new Node(arr[0]);
+            root = new TreeNode(arr[0]);
         }
-        Node curr = root,temp;
-        Queue<Node> queue = new LinkedList<Node>();
+        TreeNode curr = root,temp;
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.add(curr);
         while(2*k < n){
             temp = queue.remove();
             if(arr[2*k-1] != null)
-                temp.left = new Node(arr[2*k-1]);
+                temp.left = new TreeNode(arr[2*k-1]);
             if(arr[2*k]!=null)
-                temp.right = new Node(arr[2*k]);
+                temp.right = new TreeNode(arr[2*k]);
             if(temp.left!=null)
                 queue.add(temp.left);
             if(temp.right!=null)
@@ -28,8 +28,9 @@ public class BinaryTree {
             k++;
         }
         queue.clear();
+        return root;
     }
-    public void Inorder(Node node){
+    public void Inorder(TreeNode node){
         if(node == null) return;
         Inorder(node.left);
         System.out.print(node.data+" ");

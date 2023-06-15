@@ -52,7 +52,7 @@ class SnapshotArray {
             return pair.get(snap_id);
         }
         // display(pair.map,index,snap_id);
-        List<Integer> list = snapshots.get(index).map.keySet().stream().toList();
+        List<Integer> list = pair.map.keySet().stream().toList();
         int pos = binarySearch(list, snap_id);
         System.out.println("position:"+pos);
         if(snap_id < list.get(pos)){

@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Check",
+            "request": "launch",
+            "mainClass": "Java.CodeTrix.Check",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "AvlTree",
+            "request": "launch",
+            "mainClass": "Java.DSA.Tree.AVL.AvlTree",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "AVLTree",
+            "request": "launch",
+            "mainClass": "Java.DSA.Tree.AVL.AVLTree",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "BalanceFactor",
+            "request": "launch",
+            "mainClass": "Java.DSA.Tree.BalancedBinaryTree.BalanceFactor",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
             "name": "SnapshotArray",
             "request": "launch",
             "mainClass": "LeetCode.array_and_hashing.SnapshotArray",

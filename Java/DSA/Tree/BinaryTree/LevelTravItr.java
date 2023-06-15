@@ -4,14 +4,14 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class LevelTravItr {
-    Node root;
+    TreeNode root;
 
-    public boolean isComplete(Node root){
-        Queue<Node> queue = new LinkedList<>();
+    public boolean isComplete(TreeNode root){
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         boolean flag = false;
         while(!queue.isEmpty()){
-            Node temp = queue.remove();
+            TreeNode temp = queue.remove();
 
             if(temp.left!=null){
                 if(flag== true){
@@ -37,12 +37,12 @@ public class LevelTravItr {
 
     public static void main(String[] args) {
         LevelTravItr tree = new LevelTravItr();
-        tree.root = new Node(1);
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(3);
-        tree.root.left.right = new Node(5);
-        tree.root.left.left = new Node(4);
-        tree.root.right.right = new Node(6);
+        tree.root = new TreeNode(1);
+        tree.root.left = new TreeNode(2);
+        tree.root.right = new TreeNode(3);
+        tree.root.left.right = new TreeNode(5);
+        tree.root.left.left = new TreeNode(4);
+        tree.root.right.right = new TreeNode(6);
           
       
         if (tree.isComplete(tree.root))

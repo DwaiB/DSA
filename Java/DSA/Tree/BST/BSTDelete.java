@@ -1,12 +1,14 @@
 package Java.DSA.Tree.BST;
 
+import Java.DSA.Tree.BinaryTree.TreeNode;
+
 public class BSTDelete {
-    Node root;
-    BSTDelete(Node root){
+    TreeNode root;
+    BSTDelete(TreeNode root){
         this.root = root;
     }
-    public void caseA(Node par,Node loc){
-        Node child;
+    public void caseA(TreeNode par,TreeNode loc){
+        TreeNode child;
         if(loc.left == null && loc.right == null){
             child = null;
         }
@@ -27,8 +29,8 @@ public class BSTDelete {
             root = child;
         }
     }
-    public void caseB(Node par,Node loc){
-        Node suc,parsuc,save,ptr;
+    public void caseB(TreeNode par,TreeNode loc){
+        TreeNode suc,parsuc,save,ptr;
         save = loc;
         ptr = loc.right;
         while(ptr.left!=null){
@@ -52,8 +54,8 @@ public class BSTDelete {
         suc.right = loc.right;
     }
     public void delete(int item,BinarySearchTree tree){
-        Node loc=null;
-        Node par = tree.find(item, root);
+        TreeNode loc=null;
+        TreeNode par = tree.find(item, root);
         if(par != null && par.data == item){
             loc = par;
             par = null;
@@ -75,12 +77,12 @@ public class BSTDelete {
     }
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
-        Integer arr [] = {4,2,6,5,1,3,7};
+        Integer arr [] = {4,2,8,1,3,6,10,null,null,null,null,5,7,9,null};
         tree.insert(arr);
         tree.Inorder(tree.root);
         System.out.println();
         BSTDelete BSTD = new BSTDelete(tree.root);
-        BSTD.delete(2, tree);
+        BSTD.delete(6, tree);
         tree.Inorder(BSTD.root);
     }
 }

@@ -1,15 +1,15 @@
 package Java.DSA.Tree.BinaryTree;
 
 public class LevelTravRecursive {
-    Node root;
+    TreeNode root;
 
-    public int countNodes(Node node) {
+    public int countNodes(TreeNode node) {
         if(node == null) return 0;
 
         return (1+ countNodes(node.left) + countNodes(node.right));
     }
 
-    public boolean isComplete(Node root, int index, int count){
+    public boolean isComplete(TreeNode root, int index, int count){
         if(root == null) return true;
 
         if(index >= count) return false;
@@ -24,12 +24,12 @@ public class LevelTravRecursive {
          
         // Le us create tree in the last diagram above
         
-        tree.root = new Node(1);
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(3);
-        tree.root.left.right = new Node(5);
-        tree.root.left.left = new Node(4);
-        tree.root.right.right = new Node(6);
+        tree.root = new TreeNode(1);
+        tree.root.left = new TreeNode(2);
+        tree.root.right = new TreeNode(3);
+        tree.root.left.right = new TreeNode(5);
+        tree.root.left.left = new TreeNode(4);
+        tree.root.right.right = new TreeNode(6);
           
         int node_count = tree.countNodes(tree.root);
         int index = 0;

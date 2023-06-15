@@ -2,6 +2,8 @@ package Java.DSA.Stack;
 import java.util.ArrayList;
 import java.util.List;
 
+import Java.DSA.Tree.BinaryTree.TreeNode;
+
 public class InorderTreeTrav{
     public static  List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<Integer>();
@@ -13,13 +15,13 @@ public class InorderTreeTrav{
             return;
         }
         inorder(root.left, result);
-        result.add(root.val);
+        result.add(root.data);
         inorder(root.right, result);
     }
     public static void main(String[] args) {
         TreeNode root = new TreeNode();
         TreeNode curr = root;
-        curr.val = 1;
+        curr.data = 1;
         curr.left = new TreeNode(2);
         curr.right = new TreeNode(3);
         TreeNode lol = curr.right;

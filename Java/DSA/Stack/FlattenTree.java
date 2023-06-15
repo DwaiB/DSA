@@ -1,4 +1,7 @@
 package Java.DSA.Stack;
+
+import Java.DSA.Tree.BinaryTree.TreeNode;
+
 public class FlattenTree {
     public static void flatten(TreeNode root) {
         if(root == null) return;
@@ -22,13 +25,13 @@ public class FlattenTree {
         }
         
         inorder(root.left);
-        System.out.println(root.val);
+        System.out.println(root.data);
         inorder(root.right);
     }
     public static void main(String[] args) {
         TreeNode root = new TreeNode();
         TreeNode curr = root;
-        curr.val = 1;
+        curr.data = 1;
         curr.left = new TreeNode(2);
         curr.right = new TreeNode(3);
         flatten(root);

@@ -1,14 +1,16 @@
 package Java.DSA.Tree.BST;
 
+import Java.DSA.Tree.BinaryTree.TreeNode;
+
 public class BinarySearchTree {
-    Node root;
+    TreeNode root;
     BinarySearchTree(){}
     
-    public Node find(Integer data,Node root){
+    public TreeNode find(Integer data,TreeNode root){
         if(root == null) return null;
         if(root.data == data) return root;
 
-        Node ptr,save;
+        TreeNode ptr,save;
         save = root;
         if(root.data > data)
             ptr = root.left;
@@ -27,7 +29,7 @@ public class BinarySearchTree {
         return save;
     }
     public void insert(Integer[] arr){
-        Node temp,item;
+        TreeNode temp,item;
         for(int i=0;i<arr.length;i++){
             temp = find(arr[i],root);
             if(temp != null && 
@@ -35,9 +37,9 @@ public class BinarySearchTree {
              (temp.right!=null && temp.right.data == arr[i]))){
                 continue;
             }
-            item = new Node(arr[i]);
+            item = new TreeNode(arr[i]);
             if(temp == null){
-                root = new Node(arr[i]);
+                root = new TreeNode(arr[i]);
             }
             else if (arr[i] < temp.data){
                 temp.left = item;
@@ -46,13 +48,13 @@ public class BinarySearchTree {
             }
         }
     }
-    public void Inorder(Node node){
+    public void Inorder(TreeNode node){
         if(node == null) return;
         Inorder(node.left);
         System.out.print(node.data+" ");
         Inorder(node.right);
     }
-    public void PreOrder(Node node){
+    public void PreOrder(TreeNode node){
         if(node == null) return;
         
         System.out.print(node.data+" ");
