@@ -1,0 +1,149 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Check",
+            "request": "launch",
+            "mainClass": "Java.CodeTrix.Check",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "AvlTree",
+            "request": "launch",
+            "mainClass": "Java.DSA.Tree.AVL.AvlTree",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "AVLTree",
+            "request": "launch",
+            "mainClass": "Java.DSA.Tree.AVL.AVLTree",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "BalanceFactor",
+            "request": "launch",
+            "mainClass": "Java.DSA.Tree.BalancedBinaryTree.BalanceFactor",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "SnapshotArray",
+            "request": "launch",
+            "mainClass": "LeetCode.array_and_hashing.SnapshotArray",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "Codec",
+            "request": "launch",
+            "mainClass": "Codec",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "InvertTree",
+            "request": "launch",
+            "mainClass": "InvertTree",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "BSTDelete",
+            "request": "launch",
+            "mainClass": "Java.DSA.Tree.BST.BSTDelete",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearchTree",
+            "request": "launch",
+            "mainClass": "Java.DSA.Tree.BST.BinarySearchTree",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "BinaryTree",
+            "request": "launch",
+            "mainClass": "Java.DSA.Tree.BinaryTree.BinaryTree",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "CategorizeData",
+            "request": "launch",
+            "mainClass": "Java.DSA.Queue.CategorizeData",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "PriorityQueue",
+            "request": "launch",
+            "mainClass": "Java.DSA.Queue.PriorityQueue",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "QueueList",
+            "request": "launch",
+            "mainClass": "Java.DSA.Queue.QueueList",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "LRUCache",
+            "request": "launch",
+            "mainClass": "LRUCache",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "name": "(gdb) Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/suickselect/a.out",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/quickselect/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
