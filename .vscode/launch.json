@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CreateNumber",
+            "request": "launch",
+            "mainClass": "Java.String.CreateNumber",
+            "projectName": "DSA_b67902d3"
+        },
+        {
+            "type": "java",
+            "name": "CountGoodNumbers",
+            "request": "launch",
+            "mainClass": "CountGoodNumbers",
+            "projectName": "DSA_b67902d3"
+        },
+        {
+            "type": "java",
+            "name": "UpperLow",
+            "request": "launch",
+            "mainClass": "Java.Recursion.UpperLow",
+            "projectName": "DSA_b67902d3"
+        },
+        {
+            "type": "java",
+            "name": "Permute",
+            "request": "launch",
+            "mainClass": "Java.Backtracking.Permute",
+            "projectName": "DSA_b67902d3"
+        },
+        {
+            "type": "java",
+            "name": "NQueens",
+            "request": "launch",
+            "mainClass": "LeetCode.backtrack.NQueens",
+            "projectName": "DSA_b67902d3"
+        },
+        {
+            "type": "java",
             "name": "Check",
             "request": "launch",
             "mainClass": "Java.CodeTrix.Check",
