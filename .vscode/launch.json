@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PoissonDistribution",
+            "request": "launch",
+            "mainClass": "Java.CodeTrix.PoissonDistribution",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "Lists",
+            "request": "launch",
+            "mainClass": "Java.CodeTrix.Lists",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "BurstBaloons",
+            "request": "launch",
+            "mainClass": "BurstBaloons",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
+            "name": "PartitionList",
+            "request": "launch",
+            "mainClass": "PartitionList",
+            "projectName": "DSA_5d27a036"
+        },
+        {
+            "type": "java",
             "name": "Check",
             "request": "launch",
             "mainClass": "Java.CodeTrix.Check",
