@@ -6,6 +6,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "PoissonDistribution",
             "request": "launch",
             "mainClass": "Java.CodeTrix.PoissonDistribution",
@@ -31,6 +32,40 @@
             "request": "launch",
             "mainClass": "PartitionList",
             "projectName": "DSA_5d27a036"
+=======
+            "name": "CreateNumber",
+            "request": "launch",
+            "mainClass": "Java.String.CreateNumber",
+            "projectName": "DSA_b67902d3"
+        },
+        {
+            "type": "java",
+            "name": "CountGoodNumbers",
+            "request": "launch",
+            "mainClass": "CountGoodNumbers",
+            "projectName": "DSA_b67902d3"
+        },
+        {
+            "type": "java",
+            "name": "UpperLow",
+            "request": "launch",
+            "mainClass": "Java.Recursion.UpperLow",
+            "projectName": "DSA_b67902d3"
+        },
+        {
+            "type": "java",
+            "name": "Permute",
+            "request": "launch",
+            "mainClass": "Java.Backtracking.Permute",
+            "projectName": "DSA_b67902d3"
+        },
+        {
+            "type": "java",
+            "name": "NQueens",
+            "request": "launch",
+            "mainClass": "LeetCode.backtrack.NQueens",
+            "projectName": "DSA_b67902d3"
+>>>>>>> 569c139bbbd425e0105b1772d0909f3e9f2c17b7
         },
         {
             "type": "java",
