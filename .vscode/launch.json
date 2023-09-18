@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ListToArray",
+            "request": "launch",
+            "mainClass": "Java.CodeTrix.ListToArray",
+            "projectName": "DSA_b67902d3"
+        },
+        {
+            "type": "java",
             "name": "CreateNumber",
             "request": "launch",
             "mainClass": "Java.String.CreateNumber",
