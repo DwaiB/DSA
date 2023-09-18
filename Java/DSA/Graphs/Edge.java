@@ -10,14 +10,14 @@ public class Edge {
     public int size(){
         return adj.size();
     }
-    public int contains(int V){
+    public int indexOf(int V){
         return adj.indexOf(V);
     }
     public int valueAt(int V){
         return this.adj.get(V);
     }
     public boolean add(int V){
-        if(contains(V) != -1){
+        if(indexOf(V) != -1){
             return false;
         }else{
             this.adj.add(V);
@@ -25,11 +25,15 @@ public class Edge {
         }
     }
     public boolean remove(int V){
-        if(contains(V) == -1){
+        if(indexOf(V) == -1){
             return false;
         }else{
-            this.adj.remove(contains(V));
+            this.adj.remove(indexOf(V));
             return true;
         }
+    }
+
+    public LinkedList<Integer> getAll(){
+        return adj;
     }
 }

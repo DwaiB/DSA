@@ -36,6 +36,19 @@ public class LinkedGraph<T> implements Graph<T>{
             return a == b;
         }
     }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public T[] NODES(){
+        return (T[]) NODES;
+    }
+
+    @Override
+    public Edge EDGES(T a){
+        int loc = FIND(a);
+        Edge e = ADJ[loc];
+        return e;
+    }
     @Override
     public int FIND(T a) {
         int ptr = START,loc = -1;
@@ -47,6 +60,12 @@ public class LinkedGraph<T> implements Graph<T>{
             ptr = NEXT[ptr];
         }
         return loc;
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public T INDEX(int V){
+        return (T) NODES[V];
     }
     @Override
     public boolean DELETE(T a) {
@@ -83,7 +102,7 @@ public class LinkedGraph<T> implements Graph<T>{
         if(locA == -1 || locB == -1){
             return loc;
         }
-        loc = ADJ[locA].contains(locB);
+        loc = ADJ[locA].indexOf(locB);
         return loc;
     }
     @Override
@@ -134,6 +153,23 @@ public class LinkedGraph<T> implements Graph<T>{
     public int SIZE(){
         return SIZE;
     }
+    
+    @Override
+    public int INDEGREE(T a){
+        int loc = FIND(a);
+        int count = 0;
+        for(int i = 0; i < SIZE;i++){
+            if(i == loc) continue;
+            Edge e = ADJ[i];
+            for(int j = 0;j<e.size();j++){
+                if(e.valueAt(j) == loc){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
     @Override
     public boolean BFS(T a, T b){
         int[] visited = new int[SIZE];
