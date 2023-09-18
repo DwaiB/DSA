@@ -13,6 +13,8 @@
         },
         {
             "type": "java",
+
+=======
             "name": "CreateNumber",
             "request": "launch",
             "mainClass": "Java.String.CreateNumber",
@@ -45,6 +47,7 @@
             "request": "launch",
             "mainClass": "LeetCode.backtrack.NQueens",
             "projectName": "DSA_b67902d3"
+>>>>>>> 569c139bbbd425e0105b1772d0909f3e9f2c17b7
         },
         {
             "type": "java",
