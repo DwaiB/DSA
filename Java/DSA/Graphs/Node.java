@@ -1,4 +1,4 @@
-package Java.DSA.GraphsExtra;
+package Java.DSA.Graphs;
 
 import java.util.HashMap;
 import java.util.Map;

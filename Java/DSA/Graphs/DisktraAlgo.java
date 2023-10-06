@@ -1,4 +1,4 @@
-package Java.DSA.GraphsExtra;
+package Java.DSA.Graphs;
 
 import java.util.ArrayList;
 import java.util.List;
