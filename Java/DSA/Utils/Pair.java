@@ -1,24 +1,29 @@
 package Java.DSA.Utils;
 
 public class Pair<T,V> {
-    private T first;
-    private V second;
-    public Pair(T _first,V _second){
-        this.first = _first;
-        this.second = _second;
+    private T key;
+    private V value;
+    public Pair(T _key,V _value){
+        this.key = _key;
+        this.value = _value;
     }
-    public T first(){
-        return first;
+    public T getKey(){
+        return key;
     }
-    public V second(){
-        return second;
+    public V getValue(){
+        return value;
     }
-    public void setFirst(T _first){
-        this.first = _first;
-        this.second = null;
+    public void setKey(T _key){
+        this.key = _key;
+        this.value = null;
     }
-    public void setSecond(V _second){
-        this.second = _second;
-        this.first = null;
+    public void setValue(V _value){
+        this.value = _value;
+        this.key = null;
     }
+    @Override
+    public String toString() {
+        return String.format("KEY: %d VALUE: %d",key,value);
+    }
+    
 }
