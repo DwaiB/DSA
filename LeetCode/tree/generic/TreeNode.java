@@ -5,7 +5,6 @@ public class TreeNode{
     public TreeNode right;
 
     TreeNode() {
-        super();
     }
 
     public TreeNode(int val) {
