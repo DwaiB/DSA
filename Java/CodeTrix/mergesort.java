@@ -41,7 +41,7 @@ public class mergesort {
     }
 
     public static void main(String[] args) {
-        int [] arr = {5,3,7,9,2,4,7,1};
+        int [] arr = {-2,3,-5};
 
         merge(arr,0,arr.length-1);
 
