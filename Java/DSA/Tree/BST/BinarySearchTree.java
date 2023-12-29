@@ -3,8 +3,8 @@ package Java.DSA.Tree.BST;
 import Java.DSA.Tree.BinaryTree.TreeNode;
 
 public class BinarySearchTree {
-    TreeNode root;
-    BinarySearchTree(){}
+    public TreeNode root;
+    public BinarySearchTree(){}
     
     public TreeNode find(Integer data,TreeNode root){
         if(root == null) return null;
@@ -48,6 +48,19 @@ public class BinarySearchTree {
             }
         }
     }
+    public void Inorder(){
+        if(root == null) return;
+        Inorder(root.left);
+        System.out.print(root.data+" ");
+        Inorder(root.right);
+    }
+    public void PreOrder(){
+        if(root == null) return;
+        
+        System.out.print(root.data+" ");
+        PreOrder(root.left);
+        PreOrder(root.right);
+    }
     public void Inorder(TreeNode node){
         if(node == null) return;
         Inorder(node.left);
@@ -63,7 +76,8 @@ public class BinarySearchTree {
     }
     public static void main(String[] args) {
         BinarySearchTree BST = new BinarySearchTree();
-        Integer  [] arr = {2,4,7,5,1,8,9,6,3};
+        // Integer  [] arr = {2,4,7,5,1,8,9,6,3};
+        Integer [] arr = {2,7,4,1,6,5,9,3,8};
         BST.insert(arr);
         System.out.println("In Order: \n");
         BST.Inorder(BST.root);

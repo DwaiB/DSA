@@ -1,10 +1,10 @@
-package Java.DSA.Tree.AVL;
+package Java.DSA.Tree.BalancedBinaryTree;
 
 
 import Java.DSA.Tree.BinaryTree.TreeNode;
 import Java.DSA.Tree.BinaryTree.Traverse;
 
-public class AvlTree {
+public class BSTDeletion {
     TreeNode root;
 
     public TreeNode find(int item) {
@@ -117,7 +117,7 @@ public class AvlTree {
     }
 
     public static void main(String[] args) {
-        AvlTree tree = new AvlTree();
+        BSTDeletion tree = new BSTDeletion();
         tree.insert(4);
         tree.insert(2);
         tree.insert(3);
