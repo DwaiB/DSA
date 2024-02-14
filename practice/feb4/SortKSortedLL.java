@@ -1,4 +1,4 @@
-package practice.dsa.feb4;
+package practice.feb4;
 
 import java.util.Scanner;
 

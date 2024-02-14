@@ -1,4 +1,4 @@
-package practice.dsa.feb3;
+package practice.feb3;
 
 import Java.DSA.Tree.BinaryTree.TreeNode;
 

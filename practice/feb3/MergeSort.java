@@ -1,4 +1,4 @@
-package practice.dsa.feb3;
+package practice.feb3;
 
 public class MergeSort {
     public static void main(String[] args) {
